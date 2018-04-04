@@ -13,6 +13,7 @@
     'use strict';
 
     var CLASSIFIED_QUEUE_PAGE = 'https://support.cle.ust.hk/otrs/index.pl?Action=AgentTicketQueue;QueueID=28;View=;Filter=Unlocked';
+    var RAW_QUEUE_PAGE = 'https://support.cle.ust.hk/otrs/index.pl?Action=AgentTicketQueue;QueueID=2;View=;Filter=Unlocked';
     var CLASSIFIED_QUEUE_NUMBER = 28;
 
     var action = getUrlParameter('Action');
@@ -23,6 +24,7 @@
     if (!$('body').is('.Popup, .LoginScreen')) {
         tip_text += "<span class='keytips'>d</span> - Go to <b>d</b>ashboard. ";
         tip_text += "<span class='keytips'>q</span> - Go to classified <b>q</b>ueue. ";
+        tip_text += "<span class='keytips'>w</span> - Go to ra<b>w</b> queue. ";
     }
 
     // General Tricks for every page:
@@ -37,6 +39,10 @@
                     // press 'd' and go to dashboard
                 case 'd':
                     window.location.href =  $('#nav-Dashboard a').attr('href');
+                    break;
+
+                case 'w':
+                    window.location.href = RAW_QUEUE_PAGE;
                     break;
             }
         }
