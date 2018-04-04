@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OTRS Enhanced
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.01
 // @description  Enhance OTRS with keyboard shortcuts and prefilled contents
 // @author       Felix Li
 // @match        https://support.cle.ust.hk/otrs/index.pl*
